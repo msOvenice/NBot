@@ -1,0 +1,59 @@
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 360;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth}));
+}
+
+@mixin styles-btn() {
+	background: linear-gradient(135deg, #00BFFB -12.5%, #0270D7 114%);
+    border: none;
+    color: #FFFFFF;
+    padding: 22px 71px 22px 22px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    min-width: 225px;
+    &-block {
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+    }
+    &-text {
+        position: absolute;
+        top: 0;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+        right: 0;
+        display: flex;
+        width: 40px;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        border-left: 1px solid #00BFFB;
+        padding-left: 10px;
+    }
+	&::after,
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    &::before {
+        right: 100%;
+        border-right: 15px solid #00aff4;
+        border-bottom: 15px solid transparent;
+    }
+    &::after {
+        left: 100%;
+        border-left: 10px solid #0280df;
+        border-top: 10px solid transparent;
+    }
+}

@@ -1,0 +1,112 @@
+@media (max-width: 1024px) {
+    .intro__title {
+        line-height: 45px;
+    }
+
+    .intro__subtitle {
+        line-height: 26px;
+    }
+    .develop__pie {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .develop__card {
+        flex-direction: column;
+    }
+    .develop__content {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .opportunities {
+        &__text {
+            line-height: 18px;
+        }
+        &__subtitle {
+            line-height: 24px;
+        }
+        &__link {
+            line-height: 18px;
+        }
+    }
+    .opportunities__block-content {
+        top: -107%;
+    }
+}
+
+@media (max-width: 576px) {
+    .opportunities__row {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 361px;
+    }
+    .develop__card:first-child {
+        margin-bottom: 30px;
+    }
+    .develop__content {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .global-title {
+        margin: 0 auto -40px;
+    }
+    .opportunities__content {
+        grid-row-gap: 0;
+    }
+    .opportunities__block {
+        height: fit-content;
+        min-height: 80px;
+        width: fit-content;
+        max-width: 361px;
+    }
+    .opportunities__row:nth-child(5) .opportunities__block:first-child {
+        margin: 0 50% 0 0;
+    }
+    .opportunities__row:nth-child(5) {
+        grid-template-columns: 1fr;
+    }
+    .opportunities__row:nth-child(odd) .opportunities__block:last-child,
+    .opportunities__row:nth-child(even) .opportunities__block:first-child {
+        order: 1;
+        margin-bottom: 35px;
+    }
+    .opportunities__row:nth-child(even) .mb {
+        margin-bottom: 40px;
+    }
+    .opportunities__row:nth-child(odd) .opportunities__block:first-child,
+    .opportunities__row:nth-child(even) .opportunities__block:last-child {
+        order: 2;
+    }
+    .opportunities__block-content {
+        top: -40%;
+    }
+    .pc {
+        display: none;
+    }
+    .mb {
+        display: block;
+    }
+    .opportunities__row:nth-child(odd) .opportunities__block:first-child {
+        left: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .intro__title {
+        line-height: 28px;
+    }
+
+    .intro__subtitle {
+        line-height: 24px;
+    }
+    .btn {
+        width: 310px;
+    }
+    .container__intro {
+        padding: 0px 15px 30px;
+    }
+    .intro__image-block {
+        max-width: 196px;
+        margin: -2px auto -15px;
+    }
+}
